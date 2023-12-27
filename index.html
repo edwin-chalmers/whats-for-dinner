@@ -11,8 +11,31 @@
     </section>
     <div class="background-image"></div>
     <section class="transparent-box">
-      <div class="looking-for"></div>
-      <div class="cook-pot"></div>
+      <div class="looking-for">
+        <h1>What are you looking for?<span class="looking-for-asterisk">*</span></h1>
+        <form class="radio-options">
+          <div>
+            <input type="radio" id="menuChoice1" name="menuChoice" value="Side" />
+            <label for="menuChoice1">Side</label>
+          </div>
+          <div>
+            <input type="radio" id="menuChoice2" name="menuChoice" value="Main Dish" />
+            <label for="menuChoice2">Main Dish</label>
+          </div>
+          <div>
+            <input type="radio" id="menuChoice3" name="menuChoice" value="Dessert" />
+            <label for="menuChoice3">Dessert</label>
+          </div>
+          <div>
+            <input type="radio" id="menuChoice4" name="menuChoice" value="Entire Meal" />
+            <label for="menuChoice4">Entire Meal</label>
+          </div>
+        </form>
+        <button id="lets-cook-button">LET'S COOK!</button>
+      </div>
+      <div class="cook-pot">
+        <img src="./assets/cookpot.svg" id="cookpotSVG">
+      </div>
     </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
