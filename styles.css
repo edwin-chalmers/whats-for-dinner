@@ -134,10 +134,12 @@ ul{
     align-items: center;
     font-size: 25px;
     position: relative;
+    text-align: center;
 }
 
 #cookpotSVG {
     height: 35%;
+    display: block;
 }
 
 .cook-pot h3 {
@@ -151,10 +153,9 @@ ul{
     margin: 0;
     padding-top: 5px; 
     font-size: 25px; 
-    text-align: center;
 }
 
-.cook-pot button {
+#cook-pot-clear {
     background-color: #95a5a6;
     color: white;
     border: 0;
@@ -163,4 +164,5 @@ ul{
     position: absolute;
     bottom: 15px;
     right: 15px;
+    display: none;
 }
