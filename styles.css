@@ -74,20 +74,29 @@ html, body {
     background-color: rgba(225, 225, 225, .9);
 }
 
-.looking-for h1 {
+.looking-for h2 {
     background-color: rgba(225, 225, 225, .0);
     padding-left: 10%;
     padding-top: 10%;
 }
 
 .looking-for button {
+    background-color: #0fb9b1;
+    color: black;
     border: 0;
     border-radius: 3px;
     padding: 6px 35px;
     margin-left: 10%;
     margin-top: 5%;
-    background-color: #0fb9b1;
+    transition: background-color 0.3s, border 0.3s; /* Smooth transition for background and border changes */
 }
+
+.looking-for button:active {
+    border: 1px solid blue; 
+    box-shadow: 0 0 0 1px rgb(255, 255, 255); 
+    background-color: #92dbd7; 
+}
+
 
 .looking-for-asterisk {
     color: #ee5253;
@@ -95,11 +104,11 @@ html, body {
     font-size: smaller; /* Optionally makes the asterisk smaller than the surrounding text */
 }
 
-h1 {
+h2 {
     font-size: 20px;
 }
 
-h2 {
+h3 {
     font-size: 18px;
 }
 
@@ -120,10 +129,38 @@ ul{
 }
 .cook-pot {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 25px;
+    position: relative;
 }
 
 #cookpotSVG {
     height: 35%;
+}
+
+.cook-pot h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.cook-pot span {
+    margin: 0;
+    padding-top: 5px; 
+    font-size: 25px; 
+    text-align: center;
+}
+
+.cook-pot button {
+    background-color: #95a5a6;
+    color: white;
+    border: 0;
+    border-radius: 3px;
+    padding: 6px 12px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
 }

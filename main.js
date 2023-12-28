@@ -28,7 +28,7 @@ var recipes = {
         "Fish Sauce Fries",
         "Bean Gravy",
         "Tomato Relish",
-        "Sour Milk Mashed Potatoes",
+        "Sour Mashed Potatoes",
         "Sticky Stew"
     ],
     mains: [
@@ -106,6 +106,9 @@ var recipes = {
         "Ashy Pie",
         "Chalky Mousse",
         "Gummy Globs"
+    ],
+    meal: [
+        "Please select another option"
     ]
 }
 
@@ -116,19 +119,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     letsCookButton.addEventListener('click', function() {
         var selectedOptionValue = document.querySelector('input[name="menuChoice"]:checked').value;
-        var randomRecipe;
-
-        if (selectedOptionValue === 'Side') {
-            randomRecipe = recipes.sides[Math.floor(Math.random() * recipes.sides.length)];
-        } else if (selectedOptionValue === 'Main Dish') {
-            randomRecipe = recipes.mains[Math.floor(Math.random() * recipes.mains.length)];
-        } else if (selectedOptionValue === 'Dessert') {
-            randomRecipe = recipes.desserts[Math.floor(Math.random() * recipes.desserts.length)];
-        } else {
-            randomRecipe = 'Please select another option.';
-        }
-
-        cookPotDiv.textContent = randomRecipe;
+        var displayText = generateDisplayText(selectedOptionValue)
+        
+        cookPotDiv.innerHTML = displayText;
     });
-})
+});
+
+function generateDisplayText(value) {
+    return '<h3>You should make:</h3><span>' + recipes[value][Math.floor(Math.random() * recipes[value].length)] + '!' + '</span>';
+}
 
