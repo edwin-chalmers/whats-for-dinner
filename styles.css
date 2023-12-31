@@ -98,11 +98,6 @@ html, body {
     transition: background-color 0.3s, border 0.3s; /* Smooth transition for background and border changes */
 }
 
-.looking-for button:active {
-    border: 1px solid blue; 
-    box-shadow: 0 0 0 1px rgb(255, 255, 255); 
-    background-color: #92dbd7; 
-}
 
 
 .looking-for-asterisk {
@@ -174,6 +169,24 @@ ul{
     right: 15px;
     display: none;
 }
+
+
+/* animation */
+@keyframes colorChange {
+    0% { background-color: #0fb9b1; }
+    20% { background-color: #65d676; }
+    40% { background-color: #cbcd57; }
+    60% { background-color: #e27272; }
+    80% { background-color: #8f6ecd; }
+    100% { background-color: #0fb9b1; }  
+}
+
+.looking-for button:hover {
+    animation: colorChange 3s linear infinite;
+}
+
+
+
 
 /* iPad Pro 11" 834 × 1194 px */
 @media screen and (max-width: 834px) {
