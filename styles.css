@@ -58,8 +58,8 @@ html, body {
 
 .transparent-box {
     display: flex;
-    justify-content: space-evenly;
-    height: 50vh;
+    justify-content: center;
+    height: 290px;
     width: 100%;
     position: absolute; /* position is determined relative to the nearest positioned ancestor */
     top: 50%; 
@@ -69,15 +69,22 @@ html, body {
 }
 
 .looking-for, .cook-pot {
-    width: 30%; 
+    width: 400px; 
     height: 100%; 
     background-color: rgba(225, 225, 225, .9);
+}
+
+#spacing-box {
+    margin: 0;
+    width: 100px; 
+    height: 100%; 
 }
 
 .looking-for h2 {
     background-color: rgba(225, 225, 225, .0);
     padding-left: 10%;
-    padding-top: 10%;
+    padding-top: 6%;
+    padding-right: 8%;
 }
 
 .looking-for button {
@@ -103,6 +110,7 @@ html, body {
     vertical-align: super; /* Raises the asterisk slightly above the baseline */
     font-size: smaller; /* Optionally makes the asterisk smaller than the surrounding text */
 }
+
 
 h2 {
     font-size: 20px;
@@ -165,4 +173,95 @@ ul{
     bottom: 15px;
     right: 15px;
     display: none;
+}
+
+/* iPad Pro 11" 834 × 1194 px */
+@media screen and (max-width: 834px) {
+    
+    .transparent-box {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 20px; 
+    }
+
+    .looking-for, .cook-pot {
+        width: 50%;
+        height: 300px; 
+    }
+
+    #spacing-box {
+        height: 100px
+    }
+
+    #recipie-text h3 {
+        font-size: 10px;
+    }
+
+    #cookpotSVG {
+        height: 40%; 
+    }
+
+    .cook-pot h3, .cook-pot span {
+        font-size: 20px; 
+    }
+
+    #cook-pot-clear {
+        bottom: 10px;
+        right: 10px; 
+    }
+}
+
+/* 15 Pro Max 430 × 932 px */
+@media screen and (max-width: 430px) {
+
+    .transparent-box {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 20px; 
+    }
+
+    .looking-for, .cook-pot {
+        width: 50%;
+        height: 250px; 
+    }
+
+    .looking-for h2 {
+        margin-top: 10%;
+        font-size: 15px;
+    }
+
+
+    #recipie-text h3 {
+        font-size: 10px;
+    }
+
+    #spacing-box {
+        height: 100px
+    }
+
+    #cookpotSVG {
+        height: 40%; 
+    }
+
+    .cook-pot h3, .cook-pot span {
+        font-size: 20px; 
+    }
+
+    #cook-pot-clear {
+        bottom: 10px;
+        right: 10px; 
+    }
+
+    .radio-options div {
+    padding: 1.5%;
+    font-size: 12px;
+    }
+    
+    .looking-for button {
+    margin-top: 8%;
+    }
 }

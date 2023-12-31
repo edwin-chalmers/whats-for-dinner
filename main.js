@@ -112,22 +112,22 @@ var recipes = {
 
 document.addEventListener('DOMContentLoaded', function() {
     var letsCookButton = document.querySelector('.looking-for button');
-    var recipeTextDiv = document.querySelector('#recipeText');
-    var cookPotSVGDiv = document.querySelector('#cookpotSVG');
+    var recipeText = document.querySelector('#recipeText');
+    var cookPotSVG = document.querySelector('#cookpotSVG');
     var clearButton = document.querySelector('#cook-pot-clear');
 
     letsCookButton.addEventListener('click', function() {
         var selectedOptionValue = document.querySelector('input[name="menuChoice"]:checked').value;
         var displayText = generateDisplayText(selectedOptionValue)
         
-        cookPotSVGDiv.style.display = 'none';
-        recipeTextDiv.innerHTML = displayText;
+        cookPotSVG.style.display = 'none';
+        recipeText.innerHTML = displayText;
         clearButton.style.display = 'block';
     });
 
     clearButton.addEventListener('click', function() {
-        cookPotSVGDiv.style.display = 'block';
-        recipeTextDiv.innerHTML = '';
+        cookPotSVG.style.display = 'block';
+        recipeText.innerHTML = '';
         clearButton.style.display = 'none'; 
     });
 });
@@ -139,3 +139,4 @@ function generateDisplayText(value) {
     return '<h3>You should make:</h3><span>' + recipes[value][Math.floor(Math.random() * recipes[value].length)] + '!' + '</span>';
 
 }
+
