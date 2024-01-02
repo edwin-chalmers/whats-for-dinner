@@ -27,7 +27,7 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
-    position: relative; /* will be the reference for absolutely positioned child elements. */
+    position: relative; 
 }
 
 .responsive-image {
@@ -61,7 +61,7 @@ html, body {
     justify-content: center;
     height: 290px;
     width: 100%;
-    position: absolute; /* position is determined relative to the nearest positioned ancestor */
+    position: absolute; 
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
@@ -95,15 +95,14 @@ html, body {
     padding: 6px 35px;
     margin-left: 10%;
     margin-top: 5%;
-    transition: background-color 0.3s, border 0.3s; /* Smooth transition for background and border changes */
 }
 
 
 
 .looking-for-asterisk {
     color: #ee5253;
-    vertical-align: super; /* Raises the asterisk slightly above the baseline */
-    font-size: smaller; /* Optionally makes the asterisk smaller than the surrounding text */
+    vertical-align: super;
+    font-size: smaller; 
 }
 
 
@@ -184,8 +183,6 @@ ul{
 .looking-for button:hover {
     animation: colorChange 3s linear infinite;
 }
-
-
 
 
 /* iPad Pro 11" 834 × 1194 px */
